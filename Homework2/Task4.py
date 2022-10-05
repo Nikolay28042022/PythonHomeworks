@@ -7,11 +7,28 @@
 # res -> 3
 
 N = int(input("Enter number: "))
-pos = "0 2 4"
-listA = []
 
-for i in range(-N, N + 1):
-    listA.append(i)
+listA = []
+for i in range(N):
+    listA.append(int(input("Enter position: ")))
 print(listA)
-mult = listA[0] * listA[2] * listA[4]
-print(mult)
+
+listB = []
+for j in range(-N, N + 1):
+    listB.append(j)
+print(listB)
+
+mult = 1
+for i in range(N):
+    for j in range(-N, N + 1):
+        if listA[i] == j:
+            mult *= listB[j]
+print(mult) 
+
+"""
+Доброго дня, отлично.
+Задача 4: Немного не по условию реализовано решение. Нужно получить список из "n" элементов 
+и заполнить его рандомными числами от "-n" до "n". После запросить одной строкой, через пробел 
+индексы элементов и переммножить элементы, стоящие на этих индексах. Почитай про метод 
+".split()": https://inlnk.ru/Qwm0Pg. Задачу зачту и рекомендую поработать с ней ещё раз.
+"""
