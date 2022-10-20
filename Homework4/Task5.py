@@ -4,9 +4,6 @@
 """
 
 
-import os
-
-
 def SumPolynom():
     """Запись суммы многочленов в третий файл."""
     a = r'reat1.txt'
@@ -15,19 +12,19 @@ def SumPolynom():
         c = (f.readline())
     with open(b, 'r') as e:
         d = (e.readline())
-    f.close()
-    # print(c)
+    # f.close()
+    print(c)
     # print(d)
     k = c.split('=')
-    # print(k)
-    l_1 = k[0]
+    print(k)
+    p_1 = k[0]
     # l_2 = k[1]
     # print(l_1)
-    print(f'{l_1}+ {d}')
+    print(f'{p_1}+ {d}')
 
     f_path = r'reat2.txt'
     with open(f_path, 'w') as f:
-        f.write(f'{l_1} + {d}')
+        f.write(f'{p_1} + {d}')
 
 
 SumPolynom()
